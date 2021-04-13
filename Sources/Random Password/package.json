@@ -1,0 +1,7 @@
+{
+  "name": "random_password",
+  "dependencies": {
+    "alfy": "0.10.0",
+    "randexp": "0.5.3"
+  }
+}
