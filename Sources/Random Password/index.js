@@ -36,9 +36,16 @@ const DEFAULT_PWD_LEN = 9
 const input_len = Number(process.argv[2]) || 0
 const pwd_len = input_len >= 1 ? input_len : DEFAULT_PWD_LEN
 
-const items = PASSWORD_MODE_REGEXP_CONFIG.map(item => ({
-  title: new RandExp(`${item.value}{${pwd_len}}`).gen(),
-  subtitle: item.label
-}))
+const items = PASSWORD_MODE_REGEXP_CONFIG.map(item => {
+  const record = new RandExp(`${item.value}{${pwd_len}}`).gen()
+  return {
+    title: record,
+    subtitle: item.label,
+    text: {
+      copy: record,
+    },
+    arg: record
+  }
+})
 
 alfy.output(items);
