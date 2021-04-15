@@ -1,4 +1,3 @@
-const alfy = require('alfy')
 const RandExp = require('randexp')
 
 const PASSWORD_MODE_REGEXP_CONFIG = [{
@@ -48,4 +47,6 @@ const items = PASSWORD_MODE_REGEXP_CONFIG.map(item => {
   }
 })
 
-alfy.output(items);
+console.log(JSON.stringify({
+  items
+}, null, '\t'));
