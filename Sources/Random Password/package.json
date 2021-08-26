@@ -1,10 +1,10 @@
 {
   "name": "random_password",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "dependencies": {
     "randexp": "^0.5.3"
   },
   "devDependencies": {
-    "alfy": "0.10.0"
+    "alfy": "^0.12.1"
   }
 }
